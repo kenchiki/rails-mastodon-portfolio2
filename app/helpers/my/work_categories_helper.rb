@@ -1,0 +1,2 @@
+module My::WorkCategoriesHelper
+end

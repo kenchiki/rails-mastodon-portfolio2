@@ -82,7 +82,7 @@ entity "tag" {
 theme--{theme_setting
 user--{theme_setting
 prefectures--{user
-work--{user
+user--{work
 work--{work_link
 work--{work_image
 work_category--{work
@@ -95,5 +95,6 @@ social_category--{social
 user--{website
 activity--{user
 activity_category--{activity
+user--{work_category
 
 @enduml

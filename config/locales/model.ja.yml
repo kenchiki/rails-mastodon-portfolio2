@@ -1,6 +1,18 @@
 ---
 ja:
   activerecord:
+    models:
+      website: ウェブサイト
     attributes:
-      test:
-        name: title
+      website:
+        link_url: ウェブサイトURL
+        link_text: ウェブサイトタイトル
+        description: ウェブサイト説明
+      work_category:
+        name: カテゴリ名
+      work:
+        title: タイトル
+        description: 作品説明
+        work_category_id: 作品カテゴリ
+      work_image:
+        image: 画像

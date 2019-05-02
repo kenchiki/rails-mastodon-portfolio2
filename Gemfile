@@ -19,6 +19,12 @@ gem 'kaminari'
 gem 'fog-aws'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'mastodon-api', require: 'mastodon'
+gem 'omniauth-mastodon'
+gem 'omniauth'
+gem 'acts_as_list'
+gem 'jquery-rails'
+gem 'cocoon'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
