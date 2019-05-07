@@ -13,7 +13,7 @@
     = f.input :work_category_id, as: :select, collection: current_user.work_categories.order(position: :asc), include_blank: '選択してください'
 
   .js-work-images
-    = f.simple_fields_for :work_images do |work_image|
+    = f.simple_fields_for :work_images, f.object.work_images.sort { |a, b| a.position <=> b.position } do |work_image|
       = render 'work_image_fields', f: work_image
 
     .form-inputs

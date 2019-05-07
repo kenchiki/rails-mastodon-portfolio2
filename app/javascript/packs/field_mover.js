@@ -1,3 +1,5 @@
+import Flip from './flip';
+
 export default class {
   constructor(container) {
     this.container = container;
@@ -42,26 +44,15 @@ export default class {
 
   up(event, container, nested) {
     event.preventDefault();
-    const elms = container.querySelectorAll('.nested-fields');
-    const index = Array.prototype.indexOf.call(elms, nested);
 
-    if ((index - 1) < 0) {
-      return;
-    }
-    const prev = elms[index - 1];
-    nested.parentNode.insertBefore(nested, prev);
+    const flip = new Flip(nested);
+    flip.up(container.querySelectorAll('.nested-fields'))
   }
-
 
   down(event, container, nested) {
     event.preventDefault();
-    const elms = container.querySelectorAll('.nested-fields');
-    const index = Array.prototype.indexOf.call(elms, nested);
 
-    if ((index + 1) >= elms.length) {
-      return;
-    }
-    const next = elms[index + 1];
-    nested.parentNode.insertBefore(next, nested);
+    const flip = new Flip(nested);
+    flip.down(container.querySelectorAll('.nested-fields'))
   }
 }
