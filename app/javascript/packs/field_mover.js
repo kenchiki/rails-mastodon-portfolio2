@@ -1,4 +1,4 @@
-class FieldMover {
+export default class {
   constructor(container) {
     this.container = container;
     this.handles = [];
@@ -65,14 +65,3 @@ class FieldMover {
     nested.parentNode.insertBefore(next, nested);
   }
 }
-
-document.addEventListener('turbolinks:load', function () {
-  const fieldMover = new FieldMover(document.querySelector('.js-work-images'));
-  $('.js-work-images').on('cocoon:after-insert', function (event, added_task) {
-    fieldMover.removeButtonListener();
-    fieldMover.addButtonListener();
-    fieldMover.resetPosition();
-  });
-  fieldMover.addButtonListener();
-  fieldMover.resetPosition();
-});

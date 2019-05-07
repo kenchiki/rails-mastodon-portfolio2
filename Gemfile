@@ -25,6 +25,7 @@ gem 'omniauth'
 gem 'acts_as_list'
 gem 'jquery-rails'
 gem 'cocoon'
+gem 'webpacker', '~> 4.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
