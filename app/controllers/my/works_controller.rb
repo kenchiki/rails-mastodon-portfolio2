@@ -71,7 +71,10 @@ class My::WorksController < ApplicationController
   end
 
   def work_params
-    params.require(:work).permit(:title, :description, :work_category_id,
-                                 work_images_attributes: %i[id image position _destroy remove_image image_cache])
+    params.require(:work).permit(
+      :title, :description, :work_category_id,
+      work_images_attributes: %i[id image remove_image image_cache position _destroy],
+      work_links_attributes: %i[id link_url link_text position _destroy]
+    )
   end
 end

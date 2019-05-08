@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_004905) do
+ActiveRecord::Schema.define(version: 2019_05_07_120714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,16 @@ ActiveRecord::Schema.define(version: 2019_05_05_004905) do
     t.index ["work_id"], name: "index_work_images_on_work_id"
   end
 
+  create_table "work_links", force: :cascade do |t|
+    t.string "link_text"
+    t.string "link_url"
+    t.integer "position"
+    t.bigint "work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["work_id"], name: "index_work_links_on_work_id"
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -112,6 +122,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_004905) do
   add_foreign_key "websites", "users"
   add_foreign_key "work_categories", "users"
   add_foreign_key "work_images", "works"
+  add_foreign_key "work_links", "works"
   add_foreign_key "works", "users"
   add_foreign_key "works", "work_categories"
 end

@@ -16,3 +16,6 @@ ja:
         work_category_id: 作品カテゴリ
       work_image:
         image: 画像
+      work_link:
+        link_url: リンクURL
+        link_text: リンクテキスト

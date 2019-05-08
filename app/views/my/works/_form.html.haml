@@ -19,5 +19,12 @@
     .form-inputs
       = link_to_add_association '画像を追加', f, :work_images
 
+  .js-work-links
+    = f.simple_fields_for :work_links, f.object.work_links.sort { |a, b| a.position <=> b.position } do |work_link|
+      = render 'work_link_fields', f: work_link
+
+    .form-inputs
+      = link_to_add_association 'リンクを追加', f, :work_links
+
   .form-actions
     = f.button :submit
