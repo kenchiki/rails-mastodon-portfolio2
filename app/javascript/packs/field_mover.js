@@ -46,13 +46,13 @@ export default class {
     event.preventDefault();
 
     const flip = new Flip(nested);
-    flip.up(container.querySelectorAll('.nested-fields'))
+    flip.up(container.querySelectorAll('.nested-fields'));
   }
 
   down(event, container, nested) {
     event.preventDefault();
 
     const flip = new Flip(nested);
-    flip.down(container.querySelectorAll('.nested-fields'))
+    flip.down(container.querySelectorAll('.nested-fields'));
   }
 }
