@@ -21,7 +21,7 @@ document.addEventListener('turbolinks:load', function () {
     fieldMover.resetPosition();
 
     // フィールドの入力数制限
-    cocoonAddLimit(jsWorkImages, 4);
+    cocoonAddLimit(jsWorkImages, <%= Work::IMAGE_LIMIT %>);
   })();
 
 
@@ -44,6 +44,6 @@ document.addEventListener('turbolinks:load', function () {
     fieldMover.resetPosition();
 
     // フィールドの入力数制限
-    cocoonAddLimit(jsWorkLinks, 4);
+    cocoonAddLimit(jsWorkLinks, <%= Work::LINK_LIMIT %>);
   })();
 });

@@ -1,3 +1,3 @@
 import "@babel/polyfill"
 
-import './works'
+import './works.js.erb'
