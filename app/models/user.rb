@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :works, dependent: :destroy
 
   accepts_nested_attributes_for :websites
-  devise :database_authenticatable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[mastodon]
+  devise :database_authenticatable, :registerable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[mastodon]
 
   def self.find_or_create_user!(auth)
     uid = auth.info.name + auth.uid
