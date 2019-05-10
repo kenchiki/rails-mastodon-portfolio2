@@ -9,6 +9,12 @@
   .form-inputs
     = f.input :pr
 
+  .form-inputs
+    = f.input :prefecture_id, as: :select, collection: Prefecture.order(id: :asc), include_blank: '選択してください'
+
+  .form-inputs
+    = f.input :activity_id, as: :grouped_select, collection: grouped_select_activities, group_method: :last, include_blank: '選択してください'
+
   %h2 お仕事募集
 
   .js-enabled-accordion

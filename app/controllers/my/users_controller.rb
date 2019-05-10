@@ -21,6 +21,18 @@ class My::UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :pr, :job_pr, :job_flow, :job_note, :job_enabled, :contact_email, :contact_email_job, :contact_email_gift)
+    params.require(:user).permit(
+      :name,
+      :pr,
+      :job_pr,
+      :job_flow,
+      :job_note,
+      :job_enabled,
+      :contact_email,
+      :contact_email_job,
+      :contact_email_gift,
+      :prefecture_id,
+      :activity_id
+    )
   end
 end

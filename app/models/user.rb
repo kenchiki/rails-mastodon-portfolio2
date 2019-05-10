@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  belongs_to :prefecture, optional: true
+  belongs_to :activity, optional: true
   has_many :websites, dependent: :destroy
   has_many :work_categories, dependent: :destroy
   has_many :works, dependent: :destroy
