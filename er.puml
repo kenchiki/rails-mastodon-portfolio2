@@ -31,17 +31,6 @@ entity "work_link" {
   link_url
 }
 
-entity "social_category" {
-  name
-  position
-}
-
-entity "social" {
-  name
-  url_pattern
-  position
-}
-
 entity "work_category" {
   name
   position
@@ -89,9 +78,6 @@ work_category--{work
 user--{tagging
 tag--{tagging
 work--{tagging
-user--{user_social
-social--{user_social
-social_category--{social
 user--{website
 activity--{user
 activity_category--{activity

@@ -72,7 +72,6 @@ ActivityCategory.create!(
   ]
 )
 
-
 ActivityCategory.create!(
   name: '考える・学ぶ',
   activities_attributes: [
@@ -186,4 +185,3 @@ Prefecture.create!(name: 'アフリカ')
 Prefecture.create!(name: '北アメリカ')
 Prefecture.create!(name: '南アメリカ')
 Prefecture.create!(name: 'オセアニア')
-
