@@ -13,8 +13,12 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery3
+//= require jquery/dist/jquery.min
 //= require popper
 //= require bootstrap
 //= require cocoon
+
+//= require @yaireo/tagify/dist/tagify
+//= require axios/dist/axios.min
+
 //= require_tree .

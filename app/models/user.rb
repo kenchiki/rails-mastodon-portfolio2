@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :websites
   devise :database_authenticatable, :registerable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[mastodon]
+  acts_as_taggable_on :skills
 
   def self.find_or_create_user!(auth)
     uid = auth.info.name + auth.uid

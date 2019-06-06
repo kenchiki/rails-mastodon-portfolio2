@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     delete 'users' => 'devise/registrations#destroy', as: :user_registration
   end
 
-
   namespace :my do
     resources :websites do
       member do
@@ -33,4 +32,5 @@ Rails.application.routes.draw do
   end
 
   resources :works, only: %i[index show]
+  resources :tags, only: %i[index show]
 end

@@ -5,12 +5,11 @@ class My::UsersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to edit_my_user_path(@user), notice: t('notice.update') }
-      else
-        format.html { render :edit }
-      end
+
+    if @user.update(user_params)
+      redirect_to edit_my_user_path(@user), notice: t('notice.update')
+    else
+      render :edit
     end
   end
 
@@ -18,6 +17,7 @@ class My::UsersController < ApplicationController
 
   def set_user
     @user = current_user
+    @suggest_user_skills = %w[aaaa bbb ccc]
   end
 
   def user_params
@@ -32,7 +32,8 @@ class My::UsersController < ApplicationController
       :contact_email_job,
       :contact_email_gift,
       :prefecture_id,
-      :activity_id
+      :activity_id,
+      :skill_list
     )
   end
 end
